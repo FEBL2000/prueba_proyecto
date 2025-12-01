@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería General</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <!-- === NAVEGACIÓN SUPERIOR === -->
+<header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Mi Proyecto</a>
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Inicio</a></li>
+
+        <li class="submenu">
+          <a href="#">HTML Basico ▾</a>
+          <ul class="dropdown">
+            <li><a href="html_basico.html">HTML Basico</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú Banco -->
+        <li class="submenu">
+          <a href="#">Banco ▾</a>
+          <ul class="dropdown">
+            <li><a href="banco_tabla.html">Banco (Tabla)</a></li>
+            <li><a href="banco_miembros.html">Banco (Miembros)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="galeria.html">Galeria</a></li> 
+        <li><a href="operaciones.html">Operaciones</a></li>   
+
+        <!-- Submenú Formulario -->
+        <li class="submenu">
+          <a href="#">Formularios ▾</a>
+          <ul class="dropdown">
+            <li><a href="matriculacion.html">Matriculacion</a></li>
+            <li><a href="prueba.html">Prueba</a></li>
+         </ul>
+        </li>
+
+        <!-- Submenú Apis -->
+        <li class="submenu">
+          <a href="#">APIs ▾</a>
+          <ul class="dropdown">
+            <li><a href="clima.html">Clima</a></li>
+            <li><a href="paises.html">Países</a></li>
+            <li><a href="pokemon.html">pokémon</a></li>
+            <li><a href="rick_morty.html">Rick & Morty</a></li>
+            <li><a href="criptomonedas.html">Criptomonedas</a></li>
+          </ul>
+        </li>
+      
+        <!-- Submenú Multimedia -->
+        <li class="submenu">
+          <a href="#">Multimedia ▾</a>
+          <ul class="dropdown">
+            <li><a href="multimedia.html">Mapas</a></li>
+            <li><a href="multimedia2.html">Videos YT</a></li>
+            <li><a href="multimedia3.html">Videos y Audios</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú Menús -->
+        <li class="submenu">
+          <a href="#">Menús ▾</a>
+          <ul class="dropdown">
+            <li><a href="menu1.html">Menú 1</a></li>
+            <li><a href="menu2.html">Menú 2</a></li>
+            <li><a href="menu3.html">Menú 3</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú RedSocial -->
+        <li class="submenu">
+          <a href="#">Red Social ▾</a>
+          <ul class="dropdown">
+            <li><a href="redsocial.html">Inicio Red Social</a></li>
+            <li><a href="comentarios.html">Comentarios</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <section class="media-item galeria-tecnologia">
+    <h2>Galería de Tecnología</h2>
+
+    <!-- Bloque único de dispositivos -->
+    <div class="bloque-galeria">
+  <div class="dispositivo-card">
+    <img src="../statics/images/mouse.jpg" alt="Mouse Gamer">
+    <div class="info-hover">
+      <p><strong>Mouse Gamer</strong></p>
+      <p>Marca: Logitech, Modelo: G502 HERO</p>
+    </div>
+  </div>
+
+  <div class="dispositivo-card">
+    <img src="../statics/images/teclado.jpg" alt="Teclado Gamer">
+    <div class="info-hover">
+      <p><strong>Teclado Gamer</strong></p>
+      <p>Marca: Logitech, Modelo: G915 TKL LightSpeed</p>
+    </div>
+  </div>
+
+  <div class="dispositivo-card">
+    <img src="../statics/images/monitor.jpg" alt="Monitor Gamer">
+    <div class="info-hover">
+      <p><strong>Monitor Gamer</strong></p>
+      <p>Marca: Samsung, Modelo: Odyssey G5</p>
+    </div>
+  </div>
+
+  <div class="dispositivo-card">
+    <img src="../statics/images/auricular.webp" alt="Auriculares">
+    <div class="info-hover">
+      <p><strong>Auriculares Over-Ear</strong></p>
+      <p>Marca: Teufels</p>
+    </div>
+  </div>
+
+  <div class="dispositivo-card">
+    <img src="../statics/images/camara.jpeg" alt="Cámara GoPro">
+    <div class="info-hover">
+      <p><strong>Cámara GoPro</strong></p>
+      <p>Resolución: 4K Ultra HD</p>
+    </div>
+  </div>
+
+  <div class="dispositivo-card">
+    <img src="../statics/images/drone.jpg" alt="Drone">
+    <div class="info-hover">
+      <p><strong>Drone</strong></p>
+      <p>Incluye: Control remoto + maletín</p>
+    </div>
+  </div>
+
+  <div class="dispositivo-card">
+    <img src="../statics/images/s24.jpeg" alt="Samsung S24 Ultra">
+    <div class="info-hover">
+      <p><strong>Samsung S24 Ultra</strong></p>
+      <p>Caracteristicas: 200 MP, 512 GB</p>
+    </div>
+  </div>
+
+  <div class="dispositivo-card">
+    <img src="../statics/images/smartwatch.jpeg" alt="Smartwatch Xiaomi">
+    <div class="info-hover">
+      <p><strong>Smartwatch</strong></p>
+      <p>Marca: Xiaomi, Modelo: Watch 2</p>
+    </div>
+  </div>
+</div>
+  </section>
+</main>
+
+  <footer class="footer">
+    <p>© 2025 Mi Proyecto Web</p>
+  </footer>
+      <script src="../js/bienvenida.js"></script>
+</body>
+</html>

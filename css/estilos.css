@@ -1,0 +1,1052 @@
+/* === ESTRUCTURA GENERAL === */
+body {
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  min-height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  background-color: #f2f2f2; 
+  text-align: center;
+}
+
+main {
+  margin-top: 100px; 
+  width: 100%; 
+  max-width: 700px; 
+  padding: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+/* Bienvenida */
+.bienvenida-interactiva h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.formulario-bienvenida {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.formulario-bienvenida input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.boton-interactivo {
+  padding: 10px 20px;
+  background-color: #6cc3d5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-interactivo:hover {
+  background-color: #4daabf;
+}
+
+.mensaje-bienvenida {
+  font-size: 16px;
+  color: #222;
+  font-weight: bold;
+}
+
+/* descripcion del index */
+.descripcion-sitio h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.lista-descriptiva {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* Cambio Responsivo */
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.info-card {
+  background-color: #f9f9f9;
+  border-left: 5px solid #666; /* antes era #6cc3d5 */
+  padding: 12px 16px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 15px;
+  color: #222;
+}
+
+/* === NAVEGACIÓN SUPERIOR === */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+  color: #fff;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.logo:hover {
+  color: #ddd;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #444;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 200px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  border-bottom: 1px solid #555;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  background: #555;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+/* === SUBMENÚ === */
+.submenu {
+  position: relative;
+}
+
+.submenu > a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu > a:hover {
+  background: #555;
+}
+
+.dropdown {
+  display: none;
+  flex-direction: column;
+  background: #444;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 200px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #555;
+  z-index: 999;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  background: #555;
+}
+
+.submenu:hover .dropdown {
+  display: flex;
+}
+
+/* === BOTONES PRINCIPALES EN INDEX === */
+.botones-principales {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(100, 100, 100, 0.2);
+  /* Cambio Responsivo */
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.botones-principales button {
+  background-color: #3b5998;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botones-principales button:hover {
+  background-color: #2d4373;
+}
+
+/* === COMENTARIOS Y FORMULARIO === */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.comentario {
+  background: #eaeaea;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(150, 150, 150, 0.2);
+  text-align: left;
+}
+
+.comentario strong {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+#formComentario input,
+#formComentario textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+}
+
+#formComentario button {
+  background-color: #3b5998;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#formComentario button:hover {
+  background-color: #2d4373;
+}
+
+/* === PUBLICACIONES MULTIMEDIA === */
+.media-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.media-item h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* === BOTÓN LIKE CON CONTADOR === */
+.like-btn {
+  margin-top: auto;
+  padding: 8px 12px;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.like-btn.liked {
+  background: #ff5252;
+  color: white;
+}
+
+.like-count {
+  font-weight: bold;
+  color: #333;
+}
+
+/* === PIE DE PÁGINA === */
+.footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* === Boton Leer Mas === */
+.leer-mas {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #3b5998;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.leer-mas:hover {
+  background-color: #2d4373;
+}
+
+/* === MENÚ ACORDEÓN === */
+.menu-acordeon {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* AJUSTE: CAMBIADO DE 120px a 0 para eliminar el espacio vacío */
+  margin-top: 0; 
+  width: 100%;
+  max-width: 300px;
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.acordeon-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.acordeon-inicio {
+  display: block;
+  padding: 12px;
+  background: #3b5998;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.acordeon-inicio:hover {
+  background: #2d4373;
+}
+
+.acordeon-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #444;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.acordeon-toggle:hover {
+  background: #555;
+}
+
+.acordeon-toggle.open {
+  background: #3b5998;
+}
+
+.acordeon-content {
+  display: none;
+  flex-direction: column;
+  margin-top: 5px;
+  background: #eaeaea;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.acordeon-content a {
+  padding: 8px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 3px;
+}
+
+.acordeon-content a:hover {
+  background: #ddd;
+}
+
+/* === MENÚ HAMBURGUESA === */
+.hamburguesa-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.hamburguesa-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+}
+
+.hamburguesa-menu {
+  display: none;
+  flex-direction: column;
+  background: #ffffff;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.hamburguesa-menu a {
+  padding: 10px;
+  color: gray;
+  text-decoration: none;
+  border-bottom: 1px solid #555;
+}
+
+.hamburguesa-menu a:hover {
+  background: #fff;
+}
+
+.hamburguesa-menu.show {
+  display: flex;
+}
+
+/* === MENÚ VERTICAL === */
+.menu-vertical {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  margin-top: 120px; /* espacio para header fijo */
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.menu-link:hover {
+  background: #ddd;
+}
+
+/* === SUBMENÚ PRINCIPAL === */
+.submenu-principal {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Cambio Responsivo */
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+/* === SUBMENÚ ITEM === */
+.submenu-item {
+  position: relative;
+}
+
+.submenu-item > .menu-link {
+  cursor: pointer;
+  background: #444;
+  color: white;
+  border-radius: 5px;
+}
+
+.submenu-item > .menu-link:hover {
+  background: #555;
+}
+
+/* === SUBMENÚ LATERAL === */
+.submenu-lateral {
+  display: none;
+  flex-direction: column;
+  background: #eaeaea;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.submenu-lateral a {
+  padding: 6px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 3px;
+}
+
+.submenu-lateral a:hover {
+  background: #ddd;
+}
+
+/* Mostrar lateral al pasar el mouse */
+.submenu-item:hover .submenu-lateral {
+  display: flex;
+}
+
+/* === SECCIÓN DE VIDEOS === */
+.video-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.video-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-box img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.video-box img:hover {
+  transform: scale(1.05);
+}
+
+/* === GRID PARA VIDEOS Y AUDIOS EN 3 COLUMNAS === */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%; /* Ajuste Responsivo */
+  max-width: 1000px; /* Nuevo max-width más sensato */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.media-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.media-col video,
+.media-col audio {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* === FORMULARIO DE INSCRIPCIÓN === */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #333;
+  font-size: 15px;
+}
+
+.form-group input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Estilo tipo Excel */
+    .tabla-excel {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 15px;
+      margin-top: 20px;
+    }
+
+    .tabla-excel th,
+    .tabla-excel td {
+      border: 1px solid #ccc;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    .tabla-excel th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .tabla-excel td:last-child {
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .tabla-excel tr:nth-child(even) td {
+      background-color: #fafafa;
+    }
+
+    .tabla-excel tr:hover td {
+      background-color: #e6f7ff;
+    }
+
+    /* === SECCIÓN: MIEMBROS DEL BANCO === */
+.miembros-banco {
+  margin-top: 30px;
+}
+
+.miembros-banco h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Buscador */
+.buscador-miembro {
+  margin-bottom: 20px;
+}
+
+.buscador-miembro label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.buscador-miembro input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Lista vertical de miembros */
+.lista-miembros {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Cambio Responsivo */
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.tarjeta-miembro {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tarjeta-miembro p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+/* galeria */
+.galeria-tecnologia {
+      margin-top: 30px;
+    }
+
+    .galeria-tecnologia h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .lista-dispositivos {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      /* Cambio Responsivo */
+      flex-wrap: wrap; 
+      justify-content: center; 
+    }
+
+    .dispositivo-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .dispositivo-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .dispositivo-card p {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+
+/* Tooltip */
+.info-hover {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.dispositivo-card:hover .info-hover {
+  display: block;
+}
+
+
+/* Catalogo de productos */
+.catalogo-productos {
+  margin-top: 30px;
+}
+
+.catalogo-productos h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.bloque-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  /* Cambio Responsivo */
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.producto-card {
+  position: relative;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #1c1c1c;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.producto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.info-hover {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.producto-card:hover .info-hover {
+  display: block;
+}
+
+.catalogo-productos {
+      margin-top: 30px;
+    }
+
+    .catalogo-productos h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .bloque-productos {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .producto-card {
+      position: relative;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #1c1c1c;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      color: #fff;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .producto-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .info-hover {
+      display: none;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .producto-card:hover .info-hover {
+      display: block;
+    }
+
+/* descripcion del index */
+    .descripcion-sitio h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.lista-descriptiva {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-card {
+  background-color: #f9f9f9;
+  border-left: 5px solid #6cc3d5;
+  padding: 12px 16px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 15px;
+  color: #222;
+}
+
+
+/* --- ADAPTACIONES RESPONSIVAS (MEDIA QUERIES) --- */
+
+/* 0. Nuevo Punto de Quiebre para Desktops Pequeños/Tablets Grandes (Máx. 1024px) */
+@media (max-width: 1024px) {
+    /* El Grid pasa a 2 columnas en pantallas un poco más pequeñas que el desktop estándar */
+    .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+
+/* 1. Adaptaciones para Pantallas Medianas (Máx. 768px - Tabletas) */
+@media (max-width: 768px) {
+  main {
+    margin-top: 80px; /* Reducir margen superior */
+    padding: 15px;
+  }
+
+  /* Ajustar tamaño de fuente general */
+  body {
+    font-size: 15px;
+  }
+
+  /* Títulos más pequeños */
+  .bienvenida-interactiva h2,
+  .descripcion-sitio h2,
+  .miembros-banco h2,
+  .galeria-tecnologia h2,
+  .catalogo-productos h2 {
+    font-size: 20px;
+  }
+  
+  /* Tabla - hacer que el contenido se vea mejor si la tabla es ancha */
+  .tabla-excel {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap; /* Evita que el contenido de la tabla se rompa si es muy ancha */
+  }
+
+  /* Grid - Aseguramos el ancho */
+  .media-grid {
+    width: 100%; 
+    max-width: none;
+  }
+  
+  .media-col video,
+  .media-col audio {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Submenú lateral - Cambiamos la posición para que no se salga de la pantalla */
+  .dropdown {
+    position: static; /* Cae debajo del elemento principal del menú */
+    width: 100%;
+    right: 0;
+  }
+  .submenu-lateral {
+    position: static; /* No se muestra lateralmente, sino debajo */
+  }
+}
+
+/* 2. Adaptaciones para Pantallas Pequeñas (Máx. 480px - Móviles) */
+@media (max-width: 480px) {
+  /* Contenedores principales */
+  main {
+    margin-top: 70px;
+    padding: 10px;
+  }
+
+  /* Reducir aún más el tamaño de fuente */
+  body {
+    font-size: 14px;
+  }
+  
+  /* Nombres más pequeños para títulos */
+  .bienvenida-interactiva h2,
+  .descripcion-sitio h2,
+  .miembros-banco h2,
+  .galeria-tecnologia h2,
+  .catalogo-productos h2 {
+    font-size: 18px;
+  }
+
+  /* Grid - Cambiar a 1 columna para la mayoría de los dispositivos móviles */
+  .media-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Elementos de la cuadrícula de medios al 100% */
+  .media-col {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .media-col video,
+  .media-col audio {
+    max-width: 100%; /* Asegura que no excedan el ancho del móvil */
+  }
+  
+  /* Tarjetas de galería y producto para ocupar el ancho completo */
+  .dispositivo-card,
+  .producto-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  /* Formularios */
+  .formulario-bienvenida,
+  .form-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Menús verticales y acordeón */
+  .menu-acordeon,
+  .menu-vertical {
+    width: 100%;
+    max-width: none; /* Que ocupen todo el ancho disponible */
+    margin-top: 70px; /* Ajustar margen */
+  }
+}

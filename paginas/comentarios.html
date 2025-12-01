@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Social - Comentarios</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <!-- === NAVEGACIÓN SUPERIOR === -->
+  <!-- === NAVEGACIÓN SUPERIOR === -->
+<header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Mi Proyecto</a>
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Inicio</a></li>
+
+        <li class="submenu">
+          <a href="#">HTML Basico ▾</a>
+          <ul class="dropdown">
+            <li><a href="html_basico.html">HTML Basico</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú Banco -->
+        <li class="submenu">
+          <a href="#">Banco ▾</a>
+          <ul class="dropdown">
+            <li><a href="banco_tabla.html">Banco (Tabla)</a></li>
+            <li><a href="banco_miembros.html">Banco (Miembros)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="galeria.html">Galeria</a></li> 
+        <li><a href="operaciones.html">Operaciones</a></li>   
+
+        <!-- Submenú Formulario -->
+        <li class="submenu">
+          <a href="#">Formularios ▾</a>
+          <ul class="dropdown">
+            <li><a href="matriculacion.html">Matriculacion</a></li>
+            <li><a href="prueba.html">Prueba</a></li>
+         </ul>
+        </li>
+
+        <!-- Submenú Apis -->
+        <li class="submenu">
+          <a href="#">APIs ▾</a>
+          <ul class="dropdown">
+            <li><a href="clima.html">Clima</a></li>
+            <li><a href="paises.html">Países</a></li>
+            <li><a href="pokemon.html">pokémon</a></li>
+            <li><a href="rick_morty.html">Rick & Morty</a></li>
+            <li><a href="criptomonedas.html">Criptomonedas</a></li>
+          </ul>
+        </li>
+      
+        <!-- Submenú Multimedia -->
+        <li class="submenu">
+          <a href="#">Multimedia ▾</a>
+          <ul class="dropdown">
+            <li><a href="multimedia.html">Mapas</a></li>
+            <li><a href="multimedia2.html">Videos YT</a></li>
+            <li><a href="multimedia3.html">Videos y Audios</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú Menús -->
+        <li class="submenu">
+          <a href="#">Menús ▾</a>
+          <ul class="dropdown">
+            <li><a href="menu1.html">Menú 1</a></li>
+            <li><a href="menu2.html">Menú 2</a></li>
+            <li><a href="menu3.html">Menú 3</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú RedSocial -->
+        <li class="submenu">
+          <a href="#">Red Social ▾</a>
+          <ul class="dropdown">
+            <li><a href="redsocial.html">Inicio Red Social</a></li>
+            <li><a href="comentarios.html">Comentarios</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- === CONTENIDO PRINCIPAL === -->
+  <main>
+    <h2>Comentarios de la comunidad</h2>
+
+    <div id="comentarios" class="contenedor">
+      <div class="comentario">
+        <strong>@maca_01</strong>
+        <p>Me gusta el diseño de la página, es bastante elegante.</p>
+        <button class="like-btn" onclick="toggleLike(this)">
+          👍 Like <span class="like-count">6</span>
+        </button>
+      </div>
+
+      <div class="comentario">
+        <strong>@jose_Om</strong>
+        <p>¿Se puede agregar perfiles propios? Me encanta.</p>
+        <button class="like-btn" onclick="toggleLike(this)">
+          👍 Like <span class="like-count">2</span>
+        </button>
+      </div>
+
+      <div class="comentario">
+        <strong>@monse310</strong>
+        <p>La sección de noticias está muy interesante, bastante al día.</p>
+        <button class="like-btn" onclick="toggleLike(this)">
+          👍 Like <span class="like-count">3</span>
+        </button>
+      </div>
+    </div>
+
+    <h3>Agregar comentario</h3>
+    <form id="formComentario" class="contenedor">
+      <input type="text" id="usuario" placeholder="Tu usuario (ej: @felix)" required>
+      <textarea id="texto" placeholder="Escribe tu comentario..." required></textarea>
+      <button type="submit">Publicar</button>
+    </form>
+  </main>
+
+  <!-- === PIE DE PÁGINA === -->
+  <footer class="footer">
+    <p>© 2025 Mi Proyecto Web</p>
+  </footer>
+
+  <!-- === SCRIPTS === -->
+  <script src="../js/bienvenida.js"></script>
+</body>
+</html>

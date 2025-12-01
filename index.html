@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Proyecto Web</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <!-- === NAVEGACIÓN SUPERIOR === -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Mi Proyecto</a>
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="submenu">
+          <a href="#">HTML Basico ▾</a>
+          <ul class="dropdown">
+            <li><a href="paginas/html_basico.html">HTML Basico</a></li>
+            <li><a href="paginas/productos.html">Productos</a></li>
+            <li><a href="paginas/imagenes.html">Imagenes</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú Banco -->
+        <li class="submenu">
+          <a href="#">Banco ▾</a>
+          <ul class="dropdown">
+            <li><a href="paginas/banco_tabla.html">Banco (Tabla)</a></li>
+            <li><a href="paginas/banco_miembros.html">Banco (Miembros)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="paginas/galeria.html">Galeria</a></li> 
+        <li><a href="paginas/operaciones.html">Operaciones</a></li>   
+
+        <!-- Submenú Formulario -->
+        <li class="submenu">
+          <a href="#">Formularios ▾</a>
+          <ul class="dropdown">
+            <li><a href="paginas/matriculacion.html">Matriculacion</a></li>
+            <li><a href="paginas/prueba.html">Prueba</a></li>
+         </ul>
+        </li>
+
+        <!-- Submenú Apis -->
+        <li class="submenu">
+          <a href="#">APIs ▾</a>
+          <ul class="dropdown">
+            <li><a href="paginas/clima.html">Clima</a></li>
+            <li><a href="paginas/paises.html">Países</a></li>
+            <li><a href="paginas/pokemon.html">pokémon</a></li>
+            <li><a href="paginas/rick_morty.html">Rick & Morty</a></li>
+            <li><a href="paginas/criptomonedas.html">Criptomonedas</a></li>
+          </ul>
+        </li>
+      
+        <!-- Submenú Multimedia -->
+        <li class="submenu">
+          <a href="#">Multimedia ▾</a>
+          <ul class="dropdown">
+            <li><a href="paginas/multimedia.html">Mapas</a></li>
+            <li><a href="paginas/multimedia2.html">Videos YT</a></li>
+            <li><a href="paginas/multimedia3.html">Videos y Audios</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú Menús -->
+        <li class="submenu">
+          <a href="#">Menús ▾</a>
+          <ul class="dropdown">
+            <li><a href="paginas/menu1.html">Menú 1</a></li>
+            <li><a href="paginas/menu2.html">Menú 2</a></li>
+            <li><a href="paginas/menu3.html">Menú 3</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenú RedSocial -->
+        <li class="submenu">
+          <a href="#">Red Social ▾</a>
+          <ul class="dropdown">
+            <li><a href="paginas/redsocial.html">Inicio Red Social</a></li>
+            <li><a href="paginas/comentarios.html">Comentarios</a></li>
+            <li><a href="paginas/noticias.html">Noticias</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- === CONTENIDO PRINCIPAL === -->
+  <main>
+    <h1>Bienvenido a Mi Proyecto Web</h1>
+    <p>.</p>
+    <section class="media-item bienvenida-interactiva">
+  <h2>Bienvenida interactiva</h2>
+  <p>Favor ingrese sus datos y toque "saludar" </p>
+  <form id="formBienvenida" class="formulario-bienvenida">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" placeholder="Tu apellido" required>
+    </div>
+
+    <div class="form-group">
+      <label for="edad">Edad</label>
+      <input type="number" id="edad" placeholder="Tu edad" required>
+    </div>
+
+    <button type="submit" class="boton-interactivo">Saludar</button>
+  </form>
+
+  <div id="mensajeBienvenida" class="mensaje-bienvenida" style="margin-top: 20px;"></div>
+</section>
+
+<section class="media-item descripcion-sitio">
+  <h2>Descripción del sitio</h2>
+  <a>Pequeña descripcion de las paginas con las que se cuenta</a>
+
+  <div class="lista-descriptiva">
+    <div class="info-card">
+      <p><strong>HTML básico:</strong> Etiquetas, productos e imágenes.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>Banco:</strong> Tabla de cuentas y miembros.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>Galería:</strong> Grid responsivo con imágenes.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>Operaciones:</strong> Calculadora básica.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>Formularios:</strong> Matriculación y prueba con validaciones.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>APIs:</strong> Clima, Países, Pokémon, Rick & Morty y Criptomonedas.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>Multimedia:</strong> Mapas, videos YouTube, videos MP4 y audios.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>Menús:</strong> Variantes de navegación.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>Red Social:</strong> Publicaciones, comentarios y noticias con likes.</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- === PIE DE PÁGINA === -->
+  <footer class="footer">
+    <p>© 2025 Mi Proyecto Web</p>
+  </footer>
+
+  <!-- === SCRIPTS === -->
+  <script src="js/bienvenida.js"></script>
+  <script src="js/edad.js"></script>
+</body>
+</html>
